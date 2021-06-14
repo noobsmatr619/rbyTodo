@@ -1,0 +1,65 @@
+https://guides.rubyonrails.org/getting_started.html
+Node-https://nodejs.org/en/
+yarn-https://classic.yarnpkg.com/en/docs/install/#windows-stable
+git-https://git-scm.com/downloads
+
+
+
+ruby -https://rubyinstaller.org/
+rails-gem install rails
+
+rails new nameofThePRoject to make the project 
+
+rails s  to start server 
+rail g controller where nameofthepage 
+
+to change route - config-routes.rb
+root 'home#index'
+
+
+like react, here the pages are rendered through <%=yield%>
+if % removed it will stay wont render tho 
+<%= render 'home/header %> to bring partials like header and footer
+manually creating needs a webpage,controller, routes 
+
+rails g scaffold #dbName columnNames:dataType ColumName2:dataType
+
+rails db:migrate #push migration into the database
+rails g migration change_data_type
+
+rubygems.org
+
+
+when passing class in form tag comma isnt needed except in where there is text
+
+https://github.com/heartcombo/devise
+https://rubygems.org/
+
+for association -https://guides.rubyonrails.org/association_basics.html
+just use has_many and belongs_to
+
+change schema 
+rails g migration add_user_id_to_todos user_id:interger:index
+rails g db:migrate   
+current_user.inspect
+spcefic column would be 
+current_user.coumn name
+make sure to change params on controller 
+before_action :authenticate_user!, except: [ :index, :show]
+
+ setting association to certain user 
+  def correct_user
+    @todo=current_user.todos.find_by(id: params[:id])
+
+
+  end  
+
+  before_action :correct_user, only:[:edit,:update,:destroy]
+
+    @todo = current_user.todos.build(todo_params)
+
+
+
+
+
+ 

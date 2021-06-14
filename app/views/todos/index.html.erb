@@ -1,0 +1,46 @@
+
+<%if user_signed_in? %>
+  <h1>Todos</h1>
+
+  <table class="table table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+      <tr>
+        <%# <th>User ID</th> %>
+        <th>Task name</th>
+        <th>Task created at</th>
+        <th>Last editted at</th>
+        <th>Task need to be done by</th>
+        <th>Task description </th>
+        
+        <th colspan="3">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @todos.each do |todo| %>
+        <% if todo.user==current_user %>
+        <tr>
+          <%# <td><%= todo.user_id</td> %> 
+          <td><%= link_to todo.task_name, todo , class: " text-decoration-none"%></td>
+          <td><%= todo.task_created_at %></td>
+          <td><%= todo.task_editted_at %></td>
+          <td><%= todo.task_done_by %></td>
+          <td><%= todo.task_desc %></td>
+       
+          <%# <td><%= link_to 'Edit', edit_todo_path(todo),class:"btn btn-info" </td> %>
+          <td><%= link_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger btn-sm" %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Todo', new_todo_path, class: "btn btn-secondary" %>
+<%else%>
+
+<h1>SMATR TODO List</h1>
+
+
+<%end%>
