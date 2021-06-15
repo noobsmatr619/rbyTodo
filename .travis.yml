@@ -12,6 +12,7 @@ before_install:
   — gem install bundler
   
 before_script:
+  — bundle lock--add-platform x86_64-linux
   — bundle config set --local deployment 'true'
   — yarn
   — bundle exec rake db:create
