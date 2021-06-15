@@ -12,6 +12,8 @@ before_install:
   — gem install bundler
   
 before_script:
+  — bundle lock --add-platform ruby
+  — bundle lock --add-platform x86_64-linux
   — bundle lock--add-platform x86_64-linux
   — bundle config set --local deployment 'true'
   — yarn
