@@ -24,7 +24,7 @@ script:
   — bundle exec rake test
   — bundle exec rake test:system 
 
- notifications:
+notifications:
   email: false
 
 
