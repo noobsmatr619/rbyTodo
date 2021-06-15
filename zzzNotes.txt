@@ -63,6 +63,33 @@ before_action :authenticate_user!, except: [ :index, :show]
 
 
 
+language: ruby
+os: windows
+dist: xenial
+
+cache:
+  — bundler
+  — yarn
+services:
+  — postgresql
+before_install:
+  — nvm install --lts
+before_script:
+  — bundle install --jobs=3 --retry=3
+  — yarn
+  — bundle exec rake db:create
+  — bundle exec rake db:migrate
+  —bundle exec rake db:schema:load
+  — bundle exec rspec
+
+script:
+  — bundle exec rake test
+  — bundle exec rake test:system 
+
+ notifications:
+  email: false
+
+
 
 
  
