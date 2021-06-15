@@ -1,5 +1,5 @@
 language: ruby
-os: windows
+
 dist: xenial
 
 cache:
