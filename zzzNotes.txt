@@ -59,6 +59,9 @@ before_action :authenticate_user!, except: [ :index, :show]
     @todo = current_user.todos.build(todo_params)
 
 
+    heroku run rails db:migrate
+
+
 
 
 
