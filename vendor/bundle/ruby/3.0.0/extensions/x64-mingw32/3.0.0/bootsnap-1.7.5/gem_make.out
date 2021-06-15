@@ -1,0 +1,16 @@
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+D:/Ruby30-x64/bin/ruby.exe -I D:/Ruby30-x64/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210615-988-76hzu2.rb extconf.rb
+creating Makefile
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\=
+generating bootsnap-x64-mingw32.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210615-988-o9yjcw/bootsnap

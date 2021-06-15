@@ -1,0 +1,23 @@
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+D:/Ruby30-x64/bin/ruby.exe -I D:/Ruby30-x64/lib/ruby/site_ruby/3.0.0 -r ./siteconf20210615-988-xsnc8o.rb extconf.rb
+checking for whether -fstack-protector-strong -D_FORTIFY_SOURCE=2 is accepted as CFLAGS... yes
+checking for whether -fstack-protector-strong -l:libssp.a is accepted as LDFLAGS... yes
+checking for -lssp... yes
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\= clean
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\=
+generating puma_http11-x64-mingw32.def
+compiling http11_parser.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: D:/Interview/ToDo/ToDo/vendor/bundle/ruby/3.0.0/gems/puma-5.3.2/ext/puma_http11
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20210615-988-l65qae/puma
